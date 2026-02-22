@@ -1,0 +1,18 @@
+{
+  "name": "Python",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "postCreateCommand": "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash",
+  "customizations": {
+    "vscode": {
+      "extensions": [ "ms-python.python", "github.copilot-chat" ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "chat.agent.autoApprove": true,
+        "chat.agent.maxRequests": 100,
+        "chat.tools.edits.autoApprove": { "**/*": true, "**/.git/**": false },
+        "chat.tools.terminal.autoApprove": { "/.*/": true, "**/.git/**": false },
+        "chat.tools.terminal.ignoreDefaultAutoApproveRules": true
+      }
+    }
+  }
+}
